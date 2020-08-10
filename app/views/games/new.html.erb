@@ -2,8 +2,8 @@
 <h1><%= @letters  %></h1>
 <p>find the longest word</p>
 <form action="/score" method="post">
+  <input id="letters" name="letters" type="hidden" value="<%= @letters  %>">
   <input type="text" name="word">
-  <input type="hidden" id="letters" name="letters" value="test">
   <input type="submit" value="Play!">
 </form>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>

@@ -9,8 +9,7 @@ class GamesController < ApplicationController
   def score
     @results = ""
     word = params[:word]
-    # letters = params[:letters]
-    letters = "apple"
+    letters = params[:letters]
     english_word = check_word_api(word)
     in_the_grid = grid_included?(word, letters)
     letters_overusage = overused_letters?(word, letters)
